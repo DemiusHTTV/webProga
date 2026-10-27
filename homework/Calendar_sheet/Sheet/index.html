@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Таблица умножения</title>
+<link rel="stylesheet" href="multiplication.css">
+</head>
+<body>
+  <h1>Таблица умножения</h1>
+  <table id="table"></table>
+
+<script>
+  const N = 10;
+  let html = '<tr><th>×</th>';
+  for (let j = 1; j <= N; j++) html += `<th>${j}</th>`;
+  html += '</tr>';
+
+  for (let i = 1; i <= N; i++) {
+    html += `<tr><th>${i}</th>`;
+    for (let j = 1; j <= N; j++) html += `<td>${i * j}</td>`;
+    html += '</tr>';
+  }
+
+  document.getElementById('table').innerHTML = html;
+</script>
+</body>
+</html>
